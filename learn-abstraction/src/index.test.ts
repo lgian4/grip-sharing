@@ -22,4 +22,14 @@ describe('User', () => {
 
     expect(greeting).toBeDefined();
   });
+
+  test('should able to greet by name', () => {
+    const calledName = 'Fofo';
+
+    const user = new User('hehe');
+
+    const greeting = user.greet(calledName);
+
+    expect(greeting).toContain(calledName);
+  });
 });

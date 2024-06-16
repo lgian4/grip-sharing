@@ -5,7 +5,7 @@ export class User {
     this.name = name;
   }
 
-  greet() {
-    return 'wassup';
+  greet(name?: string) {
+    return `wassup ${name}`;
   }
 }
