@@ -40,4 +40,12 @@ describe('User', () => {
 
     expect(greeting).toContain('Mr');
   });
+
+  test('should able to greet by female gender', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', false, true);
+
+    expect(greeting).toContain('Ms');
+  });
 });
