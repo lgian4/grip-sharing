@@ -72,4 +72,12 @@ describe('User', () => {
 
     expect(greeting).toContain(`evening`);
   });
+
+  test('should able to greet good night when current time is night', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', false, true, false, false, false, true);
+
+    expect(greeting).toContain(`night`);
+  });
 });

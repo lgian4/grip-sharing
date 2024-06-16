@@ -11,7 +11,8 @@ export class User {
     isFemale?: boolean,
     isMorning?: boolean,
     isAfternoon?: boolean,
-    isEvening?: boolean
+    isEvening?: boolean,
+    isNight?: boolean
   ) {
     if (isMorning) {
       return `good morning ${name}`;
@@ -23,6 +24,10 @@ export class User {
 
     if (isEvening) {
       return `good evening ${name}`;
+    }
+
+    if (isNight) {
+      return `good night ${name}`;
     }
 
     if (isMale) {
