@@ -32,4 +32,12 @@ describe('User', () => {
 
     expect(greeting).toContain(calledName);
   });
+
+  test('should able to greet by male gender', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', true);
+
+    expect(greeting).toContain('Mr');
+  });
 });
