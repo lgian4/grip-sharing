@@ -14,4 +14,12 @@ describe('User', () => {
 
     expect(user.name).toBe(name);
   });
+
+  test('should able to greet', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet();
+
+    expect(greeting).toBeDefined();
+  });
 });
