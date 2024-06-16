@@ -48,4 +48,12 @@ describe('User', () => {
 
     expect(greeting).toContain('Ms');
   });
+
+  test('should able to greet good morning when current time is morning', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', false, true, true);
+
+    expect(greeting).toContain(`morning`);
+  });
 });

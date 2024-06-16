@@ -5,7 +5,11 @@ export class User {
     this.name = name;
   }
 
-  greet(name?: string, isMale?: boolean, isFemale?: boolean) {
+  greet(name?: string, isMale?: boolean, isFemale?: boolean, isMorning?: boolean) {
+    if (isMorning) {
+      return `good morning ${name}`;
+    }
+
     if (isMale) {
       return `wassup Mr ${name}`;
     }
