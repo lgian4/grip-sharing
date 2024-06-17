@@ -84,7 +84,7 @@ describe('User', () => {
   test('should only call by name when the gender is male and female', () => {
     const user = new User('hehe');
 
-    const greeting = user.greet('fofo', false, true, true, false, false, true);
+    const greeting = user.greet('fofo', true, true, true, false, false, true);
 
     expect(greeting).not.toContain(`Mr`);
     expect(greeting).not.toContain(`Ms`);
@@ -168,5 +168,15 @@ describe('User', () => {
     const greeting = user.greet(maleName, true, false, true, false, false, false, 'indo');
 
     expect(greeting).toContain(`Selamat pagi Pak ${maleName}`);
+  });
+
+  test('should able to greet morning to female in english language', () => {
+    const femaleName = 'Fifi';
+
+    const user = new User('hehe');
+
+    const greeting = user.greet(femaleName, false, true, true, false, false, false);
+
+    expect(greeting).toContain(`Good morning Ms ${femaleName}`);
   });
 });

@@ -42,7 +42,15 @@ export class User {
     }
 
     if (isMorning) {
-      return `good morning ${name}`;
+      if (isMale && isFemale) {
+        return `wassup ${name}`;
+      }
+
+      if (isFemale) {
+        return `Good morning Ms ${name}`;
+      }
+
+      return `Good morning ${name}`;
     }
 
     if (isAfternoon) {
