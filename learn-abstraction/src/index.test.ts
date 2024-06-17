@@ -89,4 +89,13 @@ describe('User', () => {
     expect(greeting).not.toContain(`Mr`);
     expect(greeting).not.toContain(`Ms`);
   });
+
+  test('should only call by name when the gender is not male and not female', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', false, false, true, false, false, true);
+
+    expect(greeting).not.toContain(`Mr`);
+    expect(greeting).not.toContain(`Ms`);
+  });
 });
