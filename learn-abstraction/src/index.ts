@@ -18,6 +18,10 @@ export class User {
     lang?: 'indo'
   ) {
     if (lang === 'indo') {
+      if (isMorning) {
+        return `Pagi ${name}`;
+      }
+
       if (isMale) {
         return `Halo Pak ${name}`;
       }

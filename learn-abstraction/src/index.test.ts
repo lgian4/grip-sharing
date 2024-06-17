@@ -141,4 +141,12 @@ describe('User', () => {
 
     expect(greeting).toContain(`Bu`);
   });
+
+  test('should able to greet morning with indonesian language', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('Fifi', false, true, true, false, false, false, 'indo');
+
+    expect(greeting).toContain(`Pagi`);
+  });
 });
