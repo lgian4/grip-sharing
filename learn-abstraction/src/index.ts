@@ -1,8 +1,10 @@
 export class User {
   name: string;
+  static savedUsers: User[];
 
-  constructor(name: string) {
+  constructor(name: string, savedUsers?: User[]) {
     this.name = name;
+    User.savedUsers = savedUsers || [];
   }
 
   greet(
@@ -39,5 +41,13 @@ export class User {
     }
 
     return `wassup ${name}`;
+  }
+
+  static saveToDatabase(user: User) {
+    this.savedUsers?.push(user);
+  }
+
+  static getUser(name: string) {
+    return User.savedUsers?.find((u) => u.name === name);
   }
 }
