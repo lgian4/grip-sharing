@@ -80,4 +80,13 @@ describe('User', () => {
 
     expect(greeting).toContain(`night`);
   });
+
+  test('should only call by name when the gender is male and female', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('fofo', false, true, true, false, false, true);
+
+    expect(greeting).not.toContain(`Mr`);
+    expect(greeting).not.toContain(`Ms`);
+  });
 });
