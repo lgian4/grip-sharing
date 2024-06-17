@@ -179,4 +179,16 @@ describe('User', () => {
 
     expect(greeting).toContain(`Good morning Ms ${femaleName}`);
   });
+
+  test('Given other user is male and female, When greet morning in english language, Then should greet without title', () => {
+    const otherUser = new User('Heho');
+
+    const user = new User('hehe');
+
+    const greeting = user.greet(otherUser.name, true, true, true, false, false, false);
+
+    expect(greeting).not.toContain(`Mr`);
+    expect(greeting).not.toContain(`Ms`);
+    expect(greeting).toContain(`Good morning ${otherUser.name}`);
+  });
 });

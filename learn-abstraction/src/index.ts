@@ -43,7 +43,7 @@ export class User {
 
     if (isMorning) {
       if (isMale && isFemale) {
-        return `wassup ${name}`;
+        return `Good morning ${name}`;
       }
 
       if (isFemale) {
