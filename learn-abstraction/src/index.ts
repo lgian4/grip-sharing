@@ -23,6 +23,10 @@ export class User {
           return `Selamat pagi Bu ${name}`;
         }
 
+        if (isMale) {
+          return `Selamat pagi Pak ${name}`;
+        }
+
         return `Selamat pagi ${name}`;
       }
 
