@@ -147,6 +147,16 @@ describe('User', () => {
 
     const greeting = user.greet('Fifi', false, true, true, false, false, false, 'indo');
 
-    expect(greeting).toContain(`Pagi`);
+    expect(greeting).toContain(`Selamat pagi`);
+  });
+
+  test('should able to greet morning to female in indonesian language', () => {
+    const femaleName = 'Fifi';
+
+    const user = new User('hehe');
+
+    const greeting = user.greet(femaleName, false, true, true, false, false, false, 'indo');
+
+    expect(greeting).toContain(`Selamat pagi Bu ${femaleName}`);
   });
 });

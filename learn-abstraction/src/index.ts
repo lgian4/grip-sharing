@@ -19,7 +19,11 @@ export class User {
   ) {
     if (lang === 'indo') {
       if (isMorning) {
-        return `Pagi ${name}`;
+        if (isFemale) {
+          return `Selamat pagi Bu ${name}`;
+        }
+
+        return `Selamat pagi ${name}`;
       }
 
       if (isMale) {
