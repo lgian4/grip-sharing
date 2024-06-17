@@ -22,6 +22,10 @@ export class User {
         return `Halo Pak ${name}`;
       }
 
+      if (isFemale) {
+        return `Halo Bu ${name}`;
+      }
+
       return `Halo ${name}`;
     }
 
