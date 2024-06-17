@@ -14,8 +14,13 @@ export class User {
     isMorning?: boolean,
     isAfternoon?: boolean,
     isEvening?: boolean,
-    isNight?: boolean
+    isNight?: boolean,
+    lang?: 'indo'
   ) {
+    if (lang === 'indo') {
+      return `Halo ${name}`;
+    }
+
     if (isMorning) {
       return `good morning ${name}`;
     }

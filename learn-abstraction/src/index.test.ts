@@ -109,4 +109,12 @@ describe('User', () => {
     expect(savedUser).toBeDefined();
     expect(savedUser?.name).toBe(toBeSavedUser.name);
   });
+
+  test('should able to greet by indonesian language', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet('Fifi', false, false, false, false, false, false, 'indo');
+
+    expect(greeting).toContain(`Halo`);
+  });
 });
