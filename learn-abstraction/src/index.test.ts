@@ -117,4 +117,12 @@ describe('User', () => {
 
     expect(greeting).toContain(`Halo`);
   });
+
+  test('should greet by english language by default', () => {
+    const user = new User('hehe');
+
+    const greeting = user.greet();
+
+    expect(greeting).toContain('wassup');
+  });
 });
