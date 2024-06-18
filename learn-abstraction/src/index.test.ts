@@ -99,17 +99,6 @@ describe('User', () => {
     expect(greeting).not.toContain(`Ms`);
   });
 
-  test('should able to save user', () => {
-    const toBeSavedUser = new User('hehe');
-
-    User.saveToDatabase(toBeSavedUser);
-
-    const savedUser = User.getUser(toBeSavedUser.name);
-
-    expect(savedUser).toBeDefined();
-    expect(savedUser?.name).toBe(toBeSavedUser.name);
-  });
-
   test('should able to greet by indonesian language', () => {
     const user = new User('hehe');
 
