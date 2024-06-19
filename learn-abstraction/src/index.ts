@@ -1,10 +1,12 @@
 export class User {
   name: string;
   static savedUsers: User[];
+  friends: User[];
 
   constructor(name: string, savedUsers?: User[]) {
     this.name = name;
     User.savedUsers = savedUsers || [];
+    this.friends = [];
   }
 
   greet(
@@ -82,5 +84,9 @@ export class User {
 
   static getUser(name: string) {
     return User.savedUsers?.find((u) => u.name === name);
+  }
+
+  addFriend(user: User) {
+    this.friends.push(user);
   }
 }

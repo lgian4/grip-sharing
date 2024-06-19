@@ -148,4 +148,12 @@ describe('User', () => {
     expect(greeting).not.toContain(`Ms`);
     expect(greeting).toContain(`Good morning ${otherUser.name}`);
   });
+
+  test('should able to add friend with other user', () => {
+    const otherUser = new User('Heho');
+
+    user.addFriend(otherUser);
+
+    expect(user.friends).toContainEqual<User>(otherUser);
+  });
 });
